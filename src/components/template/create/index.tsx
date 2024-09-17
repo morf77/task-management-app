@@ -1,5 +1,5 @@
-const CreatePage : FC = ()=>{
-    return <>Create</>
-}
+const CreatePage: FC = () => {
+  return <>Create</>;
+};
 
-export default CreatePage
+export default CreatePage;

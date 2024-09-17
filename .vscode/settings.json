@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 110,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.encoding": "utf8",
+  "[md]": {
+    "editor.trimAutoWhitespace": false
+  }
+}
