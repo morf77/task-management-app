@@ -1,0 +1,1 @@
+type FC = React.FC
