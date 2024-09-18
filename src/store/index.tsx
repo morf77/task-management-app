@@ -1,9 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import apiReducer from "./api-management-slice";
 
-export const globalStore = configureStore({
-  reducer: {},
+export const appStore = configureStore({
+  reducer: {
+    apiReducer: apiReducer,
+  },
 });
 
-export type globalState = ReturnType<typeof globalStore.getState>;
+export type TAppState = ReturnType<typeof appStore.getState>;
 
-export type globalDispatch = typeof globalStore.dispatch;
+export type TAppDispatch = typeof appStore.dispatch;

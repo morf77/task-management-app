@@ -5,7 +5,7 @@ const LayoutMain: FC<PropsWithChildren<HTMLDivProps>> = (props) => {
   const { children, className, ...divProps } = props;
   return (
     <div
-      className={`w-full h-[100vh] bg-gray-300 py-5 px-[5%] ${className}`}
+      className={`w-full max-h-[100vh] overflow-scroll elementScroll bg-gray-300 py-5 px-[10%] ${className}`}
       {...divProps}
     >
       {props.children}

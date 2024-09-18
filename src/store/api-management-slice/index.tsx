@@ -7,7 +7,7 @@ export interface IApiState {
     apiCalled: boolean;
     status: "failed" | "success" | null;
     isLoading: boolean;
-    data: ITaskModel | null;
+    data: Array<ITaskModel> | null;
   };
 }
 
@@ -24,7 +24,7 @@ export const apiSlice = createSlice({
   name: "api",
   initialState,
   reducers: {
-    getTaskData: (state, action: PayloadAction<ITaskModel>) => {
+    setTaskData: (state, action: PayloadAction<Array<ITaskModel>>) => {
       state.getListTasks.apiCalled = true;
       state.getListTasks.status = "success";
       state.getListTasks.data = action.payload || null;
@@ -36,6 +36,6 @@ export const apiSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { apiLoading, getTaskData } = apiSlice.actions;
+export const { apiLoading, setTaskData } = apiSlice.actions;
 
 export default apiSlice.reducer;

@@ -6,7 +6,7 @@ const H1: FC<PropsWithChildren<HTMLHeadingProps>> = ({
   // we can use functional css passing approach for class but for now i use just template strings!
   return (
     <h1
-      className={`bg-blue-300  p-3 text-center font-bold rounded-md text-blue-900 hover:scale-105 transition-transform ${className}`}
+      className={`bg-blue-300  p-3 text-center font-bold rounded-md text-blue-900  transition-transform ${className}`}
     >
       {children}
     </h1>

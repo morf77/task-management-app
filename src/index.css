@@ -5,3 +5,68 @@
 * {
   box-sizing: border-box;
 }
+
+.elementScroll::-webkit-scrollbar-track {
+  background: white;
+}
+.elementScroll::-webkit-scrollbar-thumb {
+  background-color: #dedede;
+  border-radius: 10px;
+}
+.elementScroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.skeletonBreathing {
+  animation: skeleton-loading 0.5s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(0, 0%, 100%);
+  }
+}
+
+.skeletonGradientSmall {
+  width: 100%;
+  height: 100%;
+  cursor: progress;
+  background: linear-gradient(0.25turn, transparent, #b9cff5e1, transparent),
+    linear-gradient(#eee, #eee),
+    radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
+    linear-gradient(#eee, #eee);
+  background-repeat: repeat;
+  background-size: 100% 100%, 100% 100%, 50% 50%, 50% 0;
+  background-position: -50px 0, 0 0, 0px 190px, 50px 195px;
+  animation: loadingSmall 1s infinite infinite;
+}
+
+@keyframes loadingSmall {
+  to {
+    background-position: 50px 0, 0 0, 0 190px, 50px 195px;
+  }
+}
+
+.skeletonGradientLarge {
+  width: 100%;
+  height: 100%;
+  cursor: progress;
+  background: linear-gradient(0.25turn, transparent, #b9cff5e1, transparent),
+    linear-gradient(#eee, #eee),
+    radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
+    linear-gradient(#eee, #eee);
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%, 50% 50%, 50% 0;
+  background-position: -315px 0, 0 0, 0px 190px, 50px 195px;
+  animation: loadingLarge 1s infinite alternate;
+}
+
+@keyframes loadingLarge {
+  to {
+    background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+  }
+}

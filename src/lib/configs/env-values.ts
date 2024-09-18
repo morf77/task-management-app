@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: process.env.BASE_URL,
+  baseUrl: process.env.REACT_APP_BASE_URL,
   process: process.env,
 };
 

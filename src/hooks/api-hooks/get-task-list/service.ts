@@ -1,17 +1,17 @@
 import { axiosInstance } from "../../../lib/axios";
 import { ITaskModel } from "../../../types/models/task";
+import { TBaseResponse } from "../types";
 
-const ENDPOINT = "/api/tasks";
+const ENDPOINT = "/api/task";
 
 const getService = async () => {
   try {
-    const response = await axiosInstance.get<ITaskModel>(ENDPOINT);
-
-    console.log(response);
+    const response = await axiosInstance.get<TBaseResponse<ITaskModel>>(
+      ENDPOINT
+    );
 
     return response;
   } catch (er) {
-    console.log(er);
     return null;
   }
 };

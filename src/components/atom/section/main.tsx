@@ -6,7 +6,10 @@ const SectionMain: FC<PropsWithChildren<HTMLSectionProps>> = ({
 }) => {
   // we can use functional css passing approach for class but for now i use just template strings!
   return (
-    <section className={`p-3 shadow-md ${className}`} {...restProps}>
+    <section
+      className={`p-3 shadow-md bg-gray-100 rounded-md ${className}`}
+      {...restProps}
+    >
       {children}
     </section>
   );
