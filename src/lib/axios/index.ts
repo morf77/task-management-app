@@ -19,6 +19,8 @@ axiosInstance.interceptors.request.use(
   }
 );
 
+console.log(config.baseUrl)
+
 axiosInstance.interceptors.response.use(
   (response) => {
     return response;
